@@ -71,17 +71,46 @@ $i = $i + 1;
 $i++;
 $i += 1;
 */
-$x = $x / 4;
-$x /= 4;
 
 /* Opérateurs de comparaison 
 - == compare la valeur
 - === compare la valeur et le type (utilisé surtout avec les booléans)
 - != ou <> différent en valeur 
 - ! == différent en valeurs et en types
+
+$x = $x / 4;
+$x /= 4;
 */
 
 // Exemple de vérification d'opérateurs de comparaison avec la fonction var_dump()
+
 $x = 42;
 var_dump($x == "42");
 
+echo "<br />";
+$x = 210;
+
+// Selon PSR-12 : mettre des espaces après if et elseif
+
+echo "<br />";
+$x = 0;
+
+// if (isset($x) && is_numeric($x)){
+if (isset($x) && (is_numeric($x) || is_float($x))){
+    if ($x > 0){
+        echo '$x est positif';
+    } elseif ($x < 0) {
+        echo '$x est négatif';
+    } else {
+        echo '$x est nul';
+    }
+} else {
+    echo '$x est vide';
+}
+
+echo "<br />";
+$truc = 20;
+// echo $truc++;
+echo ++$truc;
+
+// ++, -- 
