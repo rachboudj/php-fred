@@ -113,4 +113,54 @@ $truc = 20;
 // echo $truc++;
 echo ++$truc;
 
-// ++, -- 
+// ++, --
+
+$resultat = "<ul>";
+for($i = 0 ; $i <= 100 ; $i++) {
+    $resultat .= "<li>";
+    $resultat .= $i;
+    $resultat .= "</li>";
+}
+$resultat .= "<ul>";
+echo $resultat;
+
+echo "<br />";
+echo "<br />";
+
+$compteur = 0;
+$resultat = "<ul>";
+for($i = 0 ; $i <= 100 ; $i++) {
+    $resultat .= "<li>";
+    $resultat .= $i;
+    $resultat .= "</li>";
+for($i = -17627 ; $i <= 14256 ; $i++) {
+    if ($i % 7 === 0) {
+        $resultat .= "<li>";
+        $resultat .= $i;
+        $resultat .= "</li>";
+        $compteur++;
+    }
+}
+$resultat .= "<ul>";
+$resultat .= "</ul>";
+$resultat .= "<p>Il y a $compteur resultats</p>";
+
+
+// $compteur = 0;
+// $i = -17627 ;
+// $resultat2 = "<ul>";
+
+// while ($i <= 14256) {
+//     if ($i % 7 === 0) {
+//         $resultat2 .= "<li>";
+//         $resultat2 .= $i;
+//         $resultat2 .= "</li>";
+//         $compteur++;
+//     }
+//     $i++;
+// }
+
+// $resultat2 .= "</ul>";
+// $resultat2 .= "<p>Il y a $compteur resultats</p>";
+
+// echo $resultat2;
