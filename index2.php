@@ -55,6 +55,18 @@ require_once './functions/factorielle.php';
     listerFruits("Banane", "Pomme", "Poire");
 
 
+    function compter() {
+        static $x = 0;
+        echo "La valeur est $x <br />";
+        $x++;
+    }
+
+    compter();
+    compter();
+    compter();
+    compter();
+    compter();
+
 
     ?>
 </body>
