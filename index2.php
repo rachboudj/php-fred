@@ -44,6 +44,8 @@ require_once './functions/factorielle.php';
     $test = surface(10,20);
     var_dump($test);
 
+    echo mb_strlen("Boudjakdji");
+
 
     ?>
 </body>
