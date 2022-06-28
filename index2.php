@@ -46,6 +46,15 @@ require_once './functions/factorielle.php';
 
     echo mb_strlen("Boudjakdji");
 
+    function listerFruits(...$fruits) {
+        foreach($fruits as $value) {
+            echo "<p>Ce est un ou une $value </p>";
+        }
+    }
+
+    listerFruits("Banane", "Pomme", "Poire");
+
+
 
     ?>
 </body>
