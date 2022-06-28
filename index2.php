@@ -67,6 +67,13 @@ require_once './functions/factorielle.php';
     compter();
     compter();
 
+    $pommes = array("Golden", "Granny Smith", "Canada", "Pink Lady");
+    $tableau = array("Banane", "Kiwi", "Clémentine", "Poire", $pommes);
+
+    echo "<pre>";
+    var_dump($tableau);
+    echo "</pre>";
+
 
     ?>
 </body>
