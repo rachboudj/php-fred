@@ -46,6 +46,7 @@ require_once './functions/factorielle.php';
 
     echo mb_strlen("Boudjakdji");
 
+
     function listerFruits(...$fruits) {
         foreach($fruits as $value) {
             echo "<p>Ce est un ou une $value </p>";
@@ -73,6 +74,33 @@ require_once './functions/factorielle.php';
     echo "<pre>";
     var_dump($tableau);
     echo "</pre>";
+
+
+    $str = "C'est une belle chose d'être honnête, mais il est également important d'avoir raison.";
+
+    print_r(str_word_count($str, 1));
+    // print_r(str_word_count($str, 2));
+    // print_r(str_word_count($str, 1, 'àáãç3'));
+
+    echo "<pre>";
+    echo str_word_count($str);
+    echo "<br />";
+    echo mb_strlen($str);
+    echo "</pre>";
+
+
+    function calculerLongueurLargeur(float $diagonale) : string
+{
+    $diagonale = 2.54 * abs($diagonale);
+    $longueur = round($diagonale / sqrt(1 + (9/16) ** 2 ), 2);
+    $largeur = round((9 * $longueur) / 16, 2);
+    $longueur = str_replace('.', ',', $longueur);
+    $largeur = str_replace('.', ',', $largeur);
+    $resultat = "Longueur : $longueur cm, largeur : $largeur cm";
+    return $resultat;
+}
+
+    echo calculerLongueurLargeur(50);
 
 
     ?>
