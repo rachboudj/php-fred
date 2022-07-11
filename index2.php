@@ -129,9 +129,15 @@ require_once './functions/factorielle.php';
     * %% affiche %
     */
 
+    echo "<br />";
     $chaine = "Ceci est une phrase.";
     $detail = str_word_count($chaine, 2);
     var_dump($detail);
+
+    echo "<br />";
+    $position = strstr('toto@gmail.com', '@');
+
+    echo $position;
 
     ?>
 </body>
