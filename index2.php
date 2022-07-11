@@ -8,22 +8,24 @@ require_once './functions/factorielle.php';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHP - Fonctions</title>
 </head>
+
 <body>
     <?php
     //     // création d'un tableau
     //     $tableau = array("Michel", "Banane", 12, true);
-        
+
     //     // Création d'un tableau vide
     //     $tableau2 = array();
     //     // Ajout d'une valeur à la fin du tableau
     //     array_push($tableau2, "Toto", "Titi");
-        
+
     //     // Tableau associatif
     //     $tableauAssociatif = array("prenom" => "Michel", "nom" => "Dupont", "age" => 42);
 
@@ -38,17 +40,18 @@ require_once './functions/factorielle.php';
     //     $resultat .= "</li>";
     // }    
     // $resultat .= "</ul>";
-    
+
     // echo $resultat;
 
-    $test = surface(10,20);
+    $test = surface(10, 20);
     var_dump($test);
 
     echo mb_strlen("Boudjakdji");
 
 
-    function listerFruits(...$fruits) {
-        foreach($fruits as $value) {
+    function listerFruits(...$fruits)
+    {
+        foreach ($fruits as $value) {
             echo "<p>Ce est un ou une $value </p>";
         }
     }
@@ -56,7 +59,8 @@ require_once './functions/factorielle.php';
     listerFruits("Banane", "Pomme", "Poire");
 
 
-    function compter() {
+    function compter()
+    {
         static $x = 0;
         echo "La valeur est $x <br />";
         $x++;
@@ -89,16 +93,16 @@ require_once './functions/factorielle.php';
     echo "</pre>";
 
 
-    function calculerLongueurLargeur(float $diagonale) : string
-{
-    $diagonale = 2.54 * abs($diagonale);
-    $longueur = round($diagonale / sqrt(1 + (9/16) ** 2 ), 2);
-    $largeur = round((9 * $longueur) / 16, 2);
-    $longueur = str_replace('.', ',', $longueur);
-    $largeur = str_replace('.', ',', $largeur);
-    $resultat = "Longueur : $longueur cm, largeur : $largeur cm";
-    return $resultat;
-}
+    function calculerLongueurLargeur(float $diagonale): string
+    {
+        $diagonale = 2.54 * abs($diagonale);
+        $longueur = round($diagonale / sqrt(1 + (9 / 16) ** 2), 2);
+        $largeur = round((9 * $longueur) / 16, 2);
+        $longueur = str_replace('.', ',', $longueur);
+        $largeur = str_replace('.', ',', $largeur);
+        $resultat = "Longueur : $longueur cm, largeur : $largeur cm";
+        return $resultat;
+    }
 
     echo calculerLongueurLargeur(50);
 
@@ -125,6 +129,11 @@ require_once './functions/factorielle.php';
     * %% affiche %
     */
 
+    $chaine = "Ceci est une phrase.";
+    $detail = str_word_count($chaine, 2);
+    var_dump($detail);
+
     ?>
 </body>
+
 </html>
